@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de DOM JS</title>
+</head>
+<body>
+    <h1 onclick="cambiartexto(this)//this apunta a h1, porque es un OBJETO">Manejo de DOM JS</h1>
+     <script>
+       function cambiartexto(titulo){
+        console.log(titulo.innerHTML);
+           titulo.innerHTML='Nuevo Titulo';
+           console.log(titulo.innerHTML);
+        }   
+     </script>
+</body>
+</html>

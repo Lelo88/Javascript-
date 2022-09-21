@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClassName</title>
+   <style>
+       .azul{
+           color: blue;
+       }
+   </style>
+
+</head>
+<body>
+    <h1 class="azul" id="cabecero">
+        Ejemplo DOM con Javascript
+    </h1>
+    <p class="azul" id="parrafo1">Saludos</p>
+    <p class="azul" id="parrafo2">Otro parrafo</p>
+    <script>
+        let elementos=document.getElementsByClassName('azul');
+        console.log(`Numeros de elementos ${elementos.length}`);
+        //podemos isar un for
+        /*for(let i=0;i<elementos.length;i++){
+            console.log(`${i+1} ${elementos[i].innerHTML}`)
+        }*/ //imprimo cada parrafo y accedemos al contenido del parrafo de nuestro documento html
+        for(let elemento of elementos){
+            console.log(`${elemento.innerHTML}`);
+        } //otra sintaxis para recorrer el arreglo de elementos
+    </script>
+</body>
+</html>

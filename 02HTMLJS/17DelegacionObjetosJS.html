@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="titulo">Manejo Dom Javascript</h1>
+    <br>
+    
+    <form id="forma">
+        Nombre: <input type="text" id="nombre">
+       <br><br>
+        Apellido: <input type="text" id="apellido">
+    </form>
+
+    <script>
+        //ahora voy a usar los objetos nombre y apellido usando todo el formulario
+        const forma = document.getElementById('forma');
+        forma.addEventListener('focus', (evento)=>{
+            evento.target.style.background='pink';
+        }, true);
+        forma.addEventListener('blur', (evento)=>{
+            evento.target.style.background='white';
+        },true); //aparte de agregarle los paramentros de accion y de funcion, tambien le agrego un tercer valor para que pueda utilizarse en los objetos del formulario, en este caso, true
+    </script>    
+</body>
+</html>

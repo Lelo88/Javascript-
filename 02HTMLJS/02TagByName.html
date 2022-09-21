@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TagbyName</title>
+</head>
+<body>
+    <h1 id="cabecero">
+        Ejemplo DOM con Javascript
+    </h1>
+    <p id="parrafo1">Saludos</p>
+    <p id="parrafo2">Otro parrafo</p>
+    <script>
+        let parrafos=document.getElementsByTagName('p');
+        console.log(`Numeros de parrafos ${parrafos.length}`);
+        //podemos isar un for
+        for(let i=0;i<parrafos.length;i++){
+            console.log(`${i+1} ${parrafos[i].innerHTML}`)
+        } //imprimo cada parrafo y accedemos al contenido del parrafo de nuestro documento html
+    </script>
+</body>
+</html>

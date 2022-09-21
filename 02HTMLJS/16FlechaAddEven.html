@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="titulo">Manejo Dom Javascript</h1>
+    <br>
+    Nombre: <input type="text" id="nombre">
+    <br><br>
+    Apellido: <input type="text" id="apellido">
+
+    <script>
+        //hago lo mismo que antes pero con la funcion flecha. cada uno debe llevar una sola funcion
+        document.getElementById('nombre').addEventListener('focus', (evento)=>{
+            let componente = evento.target;
+            componente.style.background='yellow'; // nos regresa el elemento input text como si fuera un this
+        }); //en vez de usar this, llamo por el id y luego agrego como paramtetros la funcion que va a realizar y el nombre de la funcion donde se ejecutara la accion
+        document.getElementById('nombre').addEventListener('blur', regresar);
+        document.getElementById('apellido').addEventListener('focus', cambiar);
+        document.getElementById('apellido').addEventListener('blur', regresar);
+    </script>    
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de DOM con Javascript</title>
+</head>
+<body>
+    <h1 id="cabecero">
+        Ejemplo DOM con Javascript
+    </h1>
+    <p id="parrafo">Saludos</p>
+    <script>
+        console.log('saludos desde Javascript');
+        let cabecero = document.getElementById('cabecero'); //accedo al texto html  
+        //console.log('valor cabecero: ' + cabecero);
+        console.log(`valor cabecero: ${cabecero.innerHTML}`); //podemos hacerlo tambien en template literal
+        //con esta asignacion de variable, accedo al objeto h1 de la pagina
+        let parrafo=document.getElementById('parrafo');
+        //console.log('valor parrafo: '+parrafo);
+        console.log(`valor parrafo: ${parrafo.innerHTML}`);
+        parrafo.innerHTML='Nuevo valor del parrafo'
+        cabecero.innerHTML='Cambio de cabecero';
+        
+    </script>
+</body>
+</html>
